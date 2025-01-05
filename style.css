@@ -1,0 +1,145 @@
+.Main-Container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Wheather-Container{
+    display:flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom , lightgreen,lightblue);
+    animation: floatingGradient 10s ease infinite;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    background-size: 400% 400%;
+    align-items: center;
+}
+@keyframes floatingGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+.Search-Content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Search-Bar{
+    margin-top: 50px;
+    border-radius: 50px;
+    height: 50px;
+    width:300px;
+    border-width: 0px;
+    outline :none;
+    padding-left: 10px;
+}
+
+.Search-Bar::placeholder{
+    font-size:medium;
+    font-family: Arial;
+    
+}
+
+.Search-Icon{
+    margin-top: 50px;
+    justify-content: center;
+    height:50px;
+    width:50px;
+    margin-left: 20px;
+    border: solid;
+    border-radius:40px ;
+    border-width: 0px;
+    cursor:pointer;
+    transition: box-shadow 0.5s , opacity 0.3s;
+}
+
+.Search-Icon:hover{
+    box-shadow: 5px 5px 10px black;
+
+}
+.Search-Icon:active{
+    opacity: 0.4;
+}
+.wheather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.temp{
+    font-family: Arial;
+    color:white;
+    font-size :300%;
+}
+
+.place{
+    margin-left:0px;
+    font-size:300%;
+}
+
+.place{
+    margin-top: -10px;
+    color:white;
+    font-family: Arial;
+}
+
+
+.Conditions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.values{
+    display: flex;
+    flex-direction: column;
+}
+
+.percentage ,.Humidity, .speed,.Wind{
+    font-family: Arial;
+    color:white;
+    margin-left :10px;
+    margin-top :0px;
+}
+.Condition-Name{
+    font-family: Arial;
+    color:white;
+}
+
+#space{
+    width:50px;
+}
+
+.Image{
+    height:50px;
+}
+
+.Indication{
+    opacity :0;
+    transition: opacity 0.5s ease-in-out;
+}
+.Indication.visible{
+    opacity : 1;
+}
+
+body{
+    background-color: black;
+    transition:background-image 0.5s ease-in-out ;    
+}
+body.effect{
+    transition:background-image 0.5s ease-in-out ;
+}
